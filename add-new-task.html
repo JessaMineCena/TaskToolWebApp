@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- blank.html  Tue, 07 Jan 2020 03:35:42 GMT -->
+<head>
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+<title>Task &mdash; Add new Task</title>
+
+<!-- General CSS Files -->
+<link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+
+<!-- CSS Libraries -->
+<link rel="stylesheet" href="assets/modules/summernote/summernote-bs4.css">
+    
+<!-- Template CSS -->
+<link rel="stylesheet" href="assets/css/style.min.css">
+<link rel="stylesheet" href="assets/css/components.min.css">
+    
+    
+    
+</head>
+<body class="layout-4">
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>
+
+<div id="app">
+    <div class="main-wrapper main-wrapper-1">
+        <div class="navbar-bg"></div>
+    </div>
+ </div>
+          <!-- Start main left sidebar menu -->
+        <div class="main-sidebar sidebar-style-2">
+            <aside id="sidebar-wrapper">
+                <div class="sidebar-brand">
+                    <a href="index-2.html">Rimpido Pacific Inc</a>
+                </div>         
+                 <div class="sidebar-brand sidebar-brand-sm">
+                    <a href="index-2.html">RPI</a>
+                </div>
+                <ul class="sidebar-menu">
+                    <li class="menu-header">Manage</li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Task</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="nav-link" href="Add%20New%20Task.html">Add new Task</a></li>
+                            <li><a class="nav-link" href="UpdateTask.html">Update Task</a></li>
+                        </ul>
+                    </li>
+
+           
+                </ul>
+                <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+                   <!-- <a href="#" class="btn btn-primary btn-lg btn-block btn-icon-split"><i class="fas fa-rocket"></i> Tool Documentation</a> -->
+                </div>
+            </aside>
+        </div>
+        <!-- END LEFT SIDEBAR MENU -->
+    
+    <nav class="navbar navbar-expand-lg main-navbar">
+            <form class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                    <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+                    <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+                </ul> 
+        </form>
+    </nav>
+     
+           
+        <!-- Start app main Content -->
+                <div class="main-content"> 
+                    <div class = "container= mt-5">
+                    
+                
+                            <div class="card col-md-6">
+                                <div class="card-header text-center">
+                                    <h4> Adding Task </h4>
+                                </div>
+                                <div class="card-body ">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                        <label>Activity</label>
+                                            <input type="text" name="title" class="form-control" required>
+                                            <div class="invalid-feedback">Please fill in the Activity Name</div>
+                                        </div>
+                                        <div class="form-group col-md-12 border">
+                                            <label>Descriptions</label>
+                                            <textarea class="summernote-simple"></textarea>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputEmail4">Person Responsible</label>
+                                           <select id="inputState" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>Michell Aleluya</option>
+                                                <option>Ruel Wenceslao</option>
+                                               <option>Jessamine Cena</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputPassword4">Given By</label>
+                                            <input type="text" class="form-control" id="inputPassword4" placeholder="Full Name">
+                                        </div>
+                                         <div class="form-group col-md-6">
+                                            <label for="inputAddress">Duration</label>
+                                            <input type="text" class="form-control" id="Duration" placeholder="2 Hours..">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Date Added</label>
+                                            <input type="date" class="form-control">
+                                    </div>
+                                       
+                                    <div class="form-group col-md-6">
+                                        <label for="inputAddress2">Customer</label>
+                                        <input type="text" class="form-control" id="Customer">
+                                    </div>
+                                        <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Task Category</label>
+                                           <select id="inputState" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>HR Task</option>
+                                                <option>Monday.Com Task</option>
+                                               <option>SASOL - ZEHS_GETCOMP_NEW</option>
+                                               <option>Roche - Z_DEL_DUP_TEST</option>
+                                               <option>OJT General Task</option>
+                                            </select>
+                                    </div>
+                                    </div>
+                                 
+                                </div>
+                                  <div class="card-footer">
+                                    <button class="btn btn-primary col-md-2">Save</button>
+                                    <button class="btn btn-danger col-md-2">Cancel</button>
+                                </div>
+                            </div>
+                               </div> 
+            
+        </div>
+       
+          <!-- End app main Content -->
+    
+    
+<!-- General JS Scripts -->
+<script src="assets/bundles/lib.vendor.bundle.js"></script>
+<script src="js/CodiePie.js"></script>
+
+<!-- JS Libraies -->
+<script src="assets/modules/summernote/summernote-bs4.js"></script>
+    
+<!-- Page Specific JS File -->
+<script src="js/page/index-0.js"></script>
+    
+<!-- Template JS File -->
+<script src="js/scripts.js"></script>
+<script src="js/custom.js"></script>
+</body>
+
+<!-- blank.html  Tue, 07 Jan 2020 03:35:42 GMT -->
+</html>

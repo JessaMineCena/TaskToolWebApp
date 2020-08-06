@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- blank.html  Tue, 07 Jan 2020 03:35:42 GMT -->
+<head>
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+<title>List of Tasks &mdash; Rimpido Visual Team Management Tool</title>
+
+<!-- General CSS Files -->
+<link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+
+<!-- CSS Libraries -->
+<link rel="stylesheet" href="assets/modules/datatables/datatables.min.css">
+<link rel="stylesheet" href="assets/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="assets/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css">
+
+<!-- Template CSS -->
+<link rel="stylesheet" href="assets/css/style.min.css">
+<link rel="stylesheet" href="assets/css/components.min.css">
+</head>
+
+<body class="layout-4">
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>
+
+<div id="app">
+    <div class="main-wrapper main-wrapper-1">
+        <div class="navbar-bg"></div>
+        
+        <!-- Start app top navbar -->
+        <nav class="navbar navbar-expand-lg main-navbar">
+            <form class="form-inline mr-auto">
+            <ul class="navbar-nav mr-3">
+                <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+                <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+            </ul>
+            </form>
+            <!--<ul class="navbar-nav navbar-right">
+            <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+                <div class="dropdown-menu dropdown-list dropdown-menu-right">
+                <div class="dropdown-header">Notifications
+                    <div class="float-right">
+                    <a href="#">Mark All As Read</a>
+                    </div>
+                </div>
+                <div class="dropdown-list-content dropdown-list-icons">
+                    <a href="#" class="dropdown-item dropdown-item-unread">
+                    <div class="dropdown-item-icon bg-primary text-white">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="dropdown-item-desc">
+                        You have 100 pending tasks
+                        <div class="time text-primary">2 Min Ago</div>
+                    </div>
+                    </a>
+                </div>
+                <div class="dropdown-footer text-center">
+                    <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                </div>
+                </div>
+            </li>
+            </ul>-->
+        </nav>
+        <!-- END TOP NAV BAR-->
+        
+        <!-- Start main left sidebar menu -->
+        <div class="main-sidebar sidebar-style-2">
+            <aside id="sidebar-wrapper">
+                <div class="sidebar-brand">
+                    <a href="index.html">Rimpido Team Tool</a>
+                </div>
+                <div class="sidebar-brand sidebar-brand-sm">
+                    <a href="index.html">TMT</a>
+                </div>
+                <ul class="sidebar-menu">
+                    <li class="menu-header">Dashboard</li>
+                    <li>
+                        <a href="index.html" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </li>
+                    <li class="menu-header">Tasks</li>
+                    <li class="dropdown active">
+                        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>List of Tasks</span></a>
+                        <ul class="dropdown-menu">
+                            <li class="active"><a class="nav-link" href="task-recent.html">Recent Tasks</a></li>
+                            <li><a class="nav-link" href="task-by-category.html">Tasks by Category</a></li>
+                            <li><a class="nav-link" href="task-by-status.html">Tasks by Status</a></li>
+                        </ul>
+                    </li>
+                    <li ><a class="nav-link" href="add-task.html"><i class="far fa-edit"></i> <span>Add New Task</span></a></li>
+                    <li ><a class="nav-link" href="update-task.html"><i class="fas fa-stamp"></i> <span>Update a Task</span></a></li>
+                    <li class="menu-header">Management</li>
+                    <li><a class="nav-link" href="statistics.html"><i class="fas fa-chart-bar"></i> <span>Task Statistics</span></a></li>
+                </ul>
+                <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+                    <a href="#" class="btn btn-primary btn-lg btn-block btn-icon-split"><i class="fas fa-rocket"></i> Tool Documentation</a>
+                </div>
+            </aside>
+        </div>
+        <!-- END LEFT SIDEBAR MENU -->
+
+        <!-- Start app main Content -->
+        <div class="main-content">
+            <section class="section">
+                                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Recent Tasks</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped v_center" id="table-2">
+                                            <thead>
+                                                <tr>
+                                                <th class="text-center">
+                                                    <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad" class="custom-control-input" id="checkbox-all">
+                                                    <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
+                                                    </div>
+                                                </th>
+                                                <th>Task Name</th>
+                                                <th>Given By</th>
+                                                <th>Members</th>
+                                                <th>Date Added</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                <td>
+                                                    <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-2">
+                                                    <label for="checkbox-2" class="custom-control-label">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td>Time tool - Creation of Pages (Design & Structure) for Rimpido Time Tool</td>
+                                                <td class="align-middle">
+                                                     <img alt="image" src="assets/img/avatar/MaamZedda.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Zedda Lustre- Schuur">
+                                                     <img alt="image" src="assets/img/avatar/Sir_Jan.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Dr. Jan Schuur">
+                                                </td>
+                                                <td>
+                                                    <img alt="image" src="assets/img/avatar/Michell.jpg" class="rounded-circle" width="35" data-toggle="tooltip" title="Michell Z. Aleluya">
+                                                    <img alt="image" src="assets/img/avatar/Ruel.jpg" class="rounded-circle" width="35" data-toggle="tooltip" title="Ruel II Wenceslao">
+                                                </td>
+                                                <td>2020-02-15</td>
+                                                <td><div class="badge badge-warning">In Progress</div></td>
+                                                <td><a href="view-task.html" class="btn btn-secondary">Details</a></td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                    <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
+                                                    <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td>HR Tasks - Michell's OJT contract and agreement/ requirement for bank account application</td>
+                                                <td>
+                                                   <img alt="image" src="assets/img/avatar/MaamZedda.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Zedda Lustre Schuur"/> 
+                                                </td>
+                                                <td class="align-middle">
+                                                    <img alt="image" src="assets/img/avatar/MaamEivon.jpg" class="rounded-circle" width="35" data-toggle="tooltip" title="Eivon Pescadero Lustre">
+                                                </td>
+                                                <td>2020-02-14</td>
+                                                <td><div class="badge badge-success">Completed</div></td>
+                                                <td><a href="view-task.html" class="btn btn-secondary">Details</a></td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                    <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-3">
+                                                    <label for="checkbox-3" class="custom-control-label">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td>Roche - ZDEL_DUP_TEST (Delete Duplicate Composition)</td>
+                                                <td class="align-middle">
+                                                    <img alt="image" src="assets/img/avatar/Sir_Jan.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Jan Schuur">
+                                                </td>
+                                                <td>
+                                                    <img alt="image" src="assets/img/avatar/SirKevin.jpg" class="rounded-circle" width="35" data-toggle="tooltip" title="Debra Stewart">
+                                                </td>
+                                                <td>2020-02-07</td>
+                                                <td><div class="badge badge-warning">In Progress</div></td>
+                                                <td><a href="view-task.html" class="btn btn-secondary">Details</a></td>
+                                                </tr>
+                                                <tr>
+                                                <td>
+                                                    <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-4">
+                                                    <label for="checkbox-4" class="custom-control-label">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td>Time tool - PHP Implementation of the pages</td>
+                                                <td class="align-middle">
+                                                    <img alt="image" src="assets/img/avatar/MaamZedda.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Zedda Lustre- Schuur"> 
+                                                    <img alt="image" src="assets/img/avatar/Sir_Jan.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Dr. Jan Schuur">
+                                                </td>
+                                                <td>
+                                                    <img alt="image" src="assets/img/avatar/Jessamine.jpg" class="rounded-circle" width="35" data-toggle="tooltip" title="Jessamine Joy Cena">
+                                                    <img alt="image" src="assets/img/avatar/Michell.jpg" class="rounded-circle" width="35" data-toggle="tooltip" title="Michell Aleluya">
+                                                </td>
+                                                <td>2020-02-17</td>
+                                                <td><div class="badge badge-info">Created</div></td>
+                                                <td><a href="view-task.html" class="btn btn-secondary">Details</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- General JS Scripts -->
+<script src="assets/bundles/lib.vendor.bundle.js"></script>
+<script src="js/CodiePie.js"></script>
+
+<!-- JS Libraies -->
+<script src="assets/modules/datatables/datatables.min.js"></script>
+<script src="assets/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script src="assets/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
+<script src="assets/modules/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- Page Specific JS File -->
+<script src="js/page/modules-datatables.js"></script>
+
+<!-- Template JS File -->
+<script src="js/scripts.js"></script>
+<script src="js/custom.js"></script>
+</body>
+
+<!-- blank.html  Tue, 07 Jan 2020 03:35:42 GMT -->
+</html>
